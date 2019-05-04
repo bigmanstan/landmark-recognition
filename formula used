@@ -1,0 +1,11 @@
+evaluation are according to mean Average Precision @ 100 (mAP@100):
+
+mAP@100=1Q∑q=1Q1min(mq,100)∑k=1min(nq,100)Pq(k)relq(k)
+
+where:
+Q is the number of query images that depict landmarks from the index set
+mq is the number of index images containing a landmark in common with the query image 
+q (note that this is only for queries which depict landmarks from the index set, so mq≠0)
+nq is the number of predictions made by the system for query q
+Pq(k)is the precision at rank k for the q-th query
+relq(k) denotes the relevance of prediciton k for the q-th query: it’s 1 if the k-th prediction is correct, and 0 otherwise
